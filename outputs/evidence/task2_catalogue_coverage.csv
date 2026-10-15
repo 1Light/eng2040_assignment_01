@@ -1,0 +1,12 @@
+metric,value
+product_rows,11334
+seller_rows,2071
+translation_rows,73
+products_referenced_by_items,11906
+products_referenced_but_absent,910
+sellers_referenced_by_items,2942
+sellers_referenced_but_absent,893
+distinct_categories_in_products,73
+distinct_categories_untranslated,3
+products_without_category,509
+products_with_untranslated_category,390

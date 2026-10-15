@@ -1,0 +1,5 @@
+column,stage,source_column,retained_orders,missing_count,zero_count,negative_count,positive_count,positive_min,positive_p01,positive_p05,positive_median,positive_p95,positive_p99,positive_max
+total_item_price,raw,total_item_price_raw,15843,296,29,271,15247,0.85,12.3,19.9,89.9,580.1859999999997,99900.0,1299900.0
+total_item_price,repaired,total_item_price,15843,369,0,0,15474,0.85,12.25,19.8195,89.0,406.7324999999972,998.927,9900.0
+total_freight_value,raw,total_freight_value_raw,15843,251,85,288,15219,1.39,7.39,7.93,17.6,70.2769999999999,18230.0,321460.0
+total_freight_value,repaired,total_freight_value,15843,314,50,0,15479,2.0,7.39,7.909000000000001,17.34,54.552999999999955,102.72419999999993,479.28

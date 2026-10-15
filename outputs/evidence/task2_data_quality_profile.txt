@@ -1,0 +1,113 @@
+total_orders  missing_order_id  missing_customer_id  missing_order_status  missing_purchase_timestamp  missing_approved_timestamp  missing_carrier_timestamp  missing_customer_delivery_timestamp  missing_estimated_delivery_timestamp  missing_customer_unique_id  missing_customer_state  missing_item_total  missing_freight_total  missing_payment_total  missing_review_score
+------------  ----------------  -------------------  --------------------  --------------------------  --------------------------  -------------------------  -----------------------------------  ------------------------------------  --------------------------  ----------------------  ------------------  ---------------------  ---------------------  --------------------
+20000         0                 0                    0                     168                         199                         483                        714                                  160                                   1626                        1064                    577                 568                    882                    1206                
+raw_status      normalized_status  order_count
+--------------  -----------------  -----------
+approved        approved           1          
+canceled        canceled           836        
+  CANCELED      canceled           2          
+created         created            1          
+delivered       delivered          17161      
+  DELIVERED     delivered          769        
+invoiced        invoiced           57         
+  INVOICED      invoiced           1          
+not_reported    not_reported       804        
+processing      processing         48         
+shipped         shipped            207        
+  SHIPPED       shipped            7          
+unavailable     unavailable        102        
+  UNAVAILABLE   unavailable        4          
+raw_state  normalized_state  order_count
+---------  ----------------  -----------
+                             1064       
+AC         AC                15         
+ ac        AC                2          
+AL         AL                83         
+ al        AL                4          
+AM         AM                27         
+ am        AM                2          
+AP         AP                9          
+BA         BA                591        
+ ba        BA                22         
+CE         CE                219        
+ ce        CE                15         
+DF         DF                364        
+ df        DF                15         
+ES         ES                327        
+ es        ES                16         
+GO         GO                344        
+ go        GO                21         
+MA         MA                143        
+ ma        MA                12         
+MG         MG                2017       
+ mg        MG                96         
+MS         MS                130        
+ ms        MS                10         
+MT         MT                163        
+ mt        MT                10         
+PA         PA                159        
+ pa        PA                6          
+PB         PB                89         
+ pb        PB                2          
+PE         PE                262        
+ pe        PE                22         
+PI         PI                95         
+ pi        PI                3          
+PR         PR                897        
+ pr        PR                44         
+RJ         RJ                2241       
+ rj        RJ                107        
+RN         RN                88         
+ rn        RN                7          
+RO         RO                43         
+ ro        RO                2          
+RR         RR                12         
+RS         RS                899        
+ rs        RS                46         
+SC         SC                649        
+ sc        SC                22         
+SE         SE                69         
+ se        SE                1          
+SP         SP                7229       
+ sp        SP                387        
+TO         TO                57         
+ to        TO                3          
+ZZ         ZZ                838        
+approval_before_purchase  carrier_before_approval  delivery_before_carrier  delivery_before_purchase
+------------------------  -----------------------  -----------------------  ------------------------
+152                       416                      935                      952                     
+negative_item_total  negative_freight_total  negative_payment_total  min_item_total  max_item_total  min_freight_total  max_freight_total  min_payment_total  max_payment_total
+-------------------  ----------------------  ----------------------  --------------  --------------  -----------------  -----------------  -----------------  -----------------
+0                    0                       924                     0.85            9990.0          0.0                626.64             -218315            672666           
+orders_without_items  orders_without_payments  orders_without_reviews  orders_with_missing_customer_reference
+--------------------  -----------------------  ----------------------  --------------------------------------
+142                   0                        147                     769                                   
+item_rows  missing_price  negative_price  missing_freight  negative_freight
+---------  -------------  --------------  ---------------  ----------------
+22662      439            408             427              458             
+payment_rows  missing_payment_value  negative_payment_value  missing_installments  negative_installments
+------------  ---------------------  ----------------------  --------------------  ---------------------
+20875         945                    975                     0                     929                  
+review_rows  missing_review_score  review_score_outside_1_to_5
+-----------  --------------------  ---------------------------
+19966        1072                  1037                       
+orders_with_items_but_no_usable_item_price
+------------------------------------------
+343                                       
+orders_with_payments_but_no_usable_payment_value
+------------------------------------------------
+882                                             
+orders_with_reviews_but_no_usable_review_score
+----------------------------------------------
+1059                                          
+normalized_status  order_count  missing_delivery_timestamp  missing_estimated_timestamp
+-----------------  -----------  --------------------------  ---------------------------
+delivered          17930        180                         156                        
+canceled           838          105                         3                          
+not_reported       804          24                          0                          
+shipped            214          205                         0                          
+unavailable        106          102                         1                          
+invoiced           58           51                          0                          
+processing         48           45                          0                          
+created            1            1                           0                          
+approved           1            1                           0                          

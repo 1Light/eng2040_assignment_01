@@ -1,0 +1,65 @@
+total_rows  distinct_orders
+----------  ---------------
+20000       20000          
+duplicate_order_ids
+-------------------
+0                  
+source_orders_missing_from_clean
+--------------------------------
+0                               
+clean_orders_missing_from_source
+--------------------------------
+0                               
+invalid_normalized_status_values
+--------------------------------
+0                               
+invalid_normalized_state_values
+-------------------------------
+0                              
+eligible_rows_with_invalid_label
+--------------------------------
+0                               
+eligible_rows_with_null_label
+-----------------------------
+0                            
+ineligible_rows_with_non_null_label
+-----------------------------------
+0                                  
+ineligible_rows_without_reason
+------------------------------
+0                             
+eligible_rows_with_exclusion_reason
+-----------------------------------
+0                                  
+eligible_rows_not_delivered
+---------------------------
+0                          
+eligible_rows_missing_required_timestamp
+----------------------------------------
+0                                       
+eligible_rows_with_invalid_chronology
+-------------------------------------
+0                                    
+label_mismatches
+----------------
+0               
+eligible_orders_with_missing_optional_customer_state
+----------------------------------------------------
+967                                                 
+eligible_orders_with_missing_review_score
+-----------------------------------------
+946                                      
+eligible_orders_with_missing_item_total
+---------------------------------------
+369                                    
+eligible_orders_with_missing_payment_total
+------------------------------------------
+691                                       
+delivery_label_eligible  order_count
+-----------------------  -----------
+1                        15843      
+0                        4157       
+delivered_after_estimate  order_count
+------------------------  -----------
+0                         14783      
+1                         1060       

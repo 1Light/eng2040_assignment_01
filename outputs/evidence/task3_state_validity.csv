@@ -1,0 +1,5 @@
+state_category,orders
+valid_brazil_state_code,14211
+missing_state,967
+invalid_or_unknown_state_code,665
+state_code_ZZ,665

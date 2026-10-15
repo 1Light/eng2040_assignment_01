@@ -1,0 +1,131 @@
+check_name                  value
+--------------------------  -----
+source_orders               20000
+derived_order_level_rows    20000
+derived_distinct_order_ids  20000
+source_orders_missing_from_derived
+----------------------------------
+0                                 
+derived_orders_missing_from_source
+----------------------------------
+0                                 
+duplicate_order_ids
+-------------------
+0                  
+source_item_rows  repaired_item_rows  derived_item_rows
+----------------  ------------------  -----------------
+22662             22662               22662            
+source_orders_with_items  derived_orders_with_items
+------------------------  -------------------------
+19858                     19858                    
+repaired_item_rows_missing_from_source
+--------------------------------------
+0                                     
+item_rows_with_altered_raw_price  item_rows_with_altered_raw_freight
+--------------------------------  ----------------------------------
+0                                 0                                 
+unflagged_item_rows_with_changed_price
+--------------------------------------
+0                                     
+unflagged_item_rows_with_changed_freight
+----------------------------------------
+0                                       
+source_item_price_total  repaired_table_raw_price_total  derived_raw_price_total
+-----------------------  ------------------------------  -----------------------
+54446205.77              54446205.77                     54446205.77            
+source_freight_total  repaired_table_raw_freight_total  derived_raw_freight_total
+--------------------  --------------------------------  -------------------------
+10515059.68           10515059.68                       10515059.68              
+item_level_repaired_price_total  order_level_repaired_price_total
+-------------------------------  --------------------------------
+2737649.22                       2737649.22                      
+item_level_repaired_freight_total  order_level_repaired_freight_total
+---------------------------------  ----------------------------------
+444016.78                          444016.78                         
+item_level_repairs  derived_repairs
+------------------  ---------------
+1751                1751           
+item_level_missing_price_rows  derived_missing_price_rows  item_level_missing_freight_rows  derived_missing_freight_rows
+-----------------------------  --------------------------  -------------------------------  ----------------------------
+439                            439                         427                              427                         
+orders_with_inconsistent_price_total_nullability
+------------------------------------------------
+0                                               
+orders_with_inconsistent_freight_total_nullability
+--------------------------------------------------
+0                                                 
+orders_with_negative_repaired_totals
+------------------------------------
+0                                   
+source_product_rows  cleaned_product_rows  source_seller_rows  cleaned_seller_rows
+-------------------  --------------------  ------------------  -------------------
+11334                11334                 2071                2071               
+product_rows_with_altered_raw_weight  product_rows_with_altered_raw_length  product_rows_with_altered_raw_category
+------------------------------------  ------------------------------------  --------------------------------------
+0                                     0                                     0                                     
+unflagged_product_rows_with_changed_weight
+------------------------------------------
+0                                         
+products_with_negative_repaired_measurements
+--------------------------------------------
+0                                           
+products_with_surviving_missing_sentinel
+----------------------------------------
+0                                       
+sellers_with_unnormalized_state
+-------------------------------
+0                              
+item_level_orphan_product_rows  derived_orphan_product_rows  item_level_orphan_seller_rows  derived_orphan_seller_rows
+------------------------------  ---------------------------  -----------------------------  --------------------------
+910                             910                          893                            893                       
+orders_with_inconsistent_weight_total_nullability
+-------------------------------------------------
+0                                                
+orders_with_inconsistent_volume_total_nullability
+-------------------------------------------------
+0                                                
+orders_with_negative_catalogue_aggregates
+-----------------------------------------
+0                                        
+orders_with_impossible_seller_state_counts
+------------------------------------------
+0                                         
+orders_with_impossible_category_counts
+--------------------------------------
+0                                     
+orders_with_primary_catalogue_values_but_no_items
+-------------------------------------------------
+0                                                
+orders_claiming_same_state_without_customer_state
+-------------------------------------------------
+0                                                
+source_payment_rows  derived_payment_rows
+-------------------  --------------------
+20875                20875               
+source_orders_with_payments  derived_orders_with_payments
+---------------------------  ----------------------------
+20000                        20000                       
+source_payment_total  derived_payment_total
+--------------------  ---------------------
+280524473.0           280524473.0          
+source_review_rows  derived_review_rows
+------------------  -------------------
+19966               19966              
+source_orders_with_reviews  derived_orders_with_reviews
+--------------------------  ---------------------------
+19853                       19853                      
+source_orders_with_missing_customer_reference
+---------------------------------------------
+769                                          
+derived_orders_with_missing_customer_attributes
+-----------------------------------------------
+769                                            
+orders_with_zero_items
+----------------------
+142                   
+orders_with_zero_payments
+-------------------------
+0                        
+orders_with_zero_reviews
+------------------------
+147                     

@@ -1,0 +1,3 @@
+column,original_total,repaired_total,observed_difference,sum_of_recorded_corrections,reconciles
+price,54446205.77,2749872.09,-51696333.68,-51696333.68,yes
+freight_value,10515059.68,447027.82,-10068031.86,-10068031.86,yes

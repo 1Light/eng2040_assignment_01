@@ -1,0 +1,4 @@
+rule,labeled_orders,late_orders,on_time_orders,late_rate,orders_difference_from_primary,late_rate_difference_from_primary
+minimal_valid_delivery_and_estimate,17273,1107,16166,0.06408846176113009,1430,-0.0028180584686243737
+primary_purchase_approval_chronology,15843,1060,14783,0.06690652022975446,0,0.0
+carrier_strict_chronology,15335,1041,14294,0.06788392566025432,-508,0.0009774054304998586

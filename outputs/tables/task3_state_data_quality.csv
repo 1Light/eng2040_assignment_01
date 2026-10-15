@@ -1,0 +1,7 @@
+metric,value
+primary_labeled_orders,15843
+orders_with_valid_state,14211
+orders_with_missing_state,967
+orders_with_invalid_or_unknown_state,665
+orders_with_state_code_ZZ,665
+valid_state_codes_analyzed,27

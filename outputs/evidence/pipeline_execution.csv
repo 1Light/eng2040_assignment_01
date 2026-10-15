@@ -1,0 +1,23 @@
+step,command,runtime_seconds,return_code,status
+Build source SQLite database,python3 setup_db.py,0.3413071669638157,0,passed
+Task 2 item-value repair (runs before the Task 1 build),python3 src/task2/task2_clean_items.py,0.16056616697460413,0,passed
+Task 2 catalogue repair (runs before the Task 1 build),python3 src/task2/task2_clean_products.py,0.13126862503122538,0,passed
+Task 1 resource measurement and order-level build,python3 src/task1/task1_measure_resources.py,0.4996236249571666,0,passed
+Task 1 loading benchmark,python3 src/task1/task1_benchmark_loading.py,4.816388415987603,0,passed
+Task 1 validation,python3 src/common/run_sql_script.py marketplace.sqlite sql/task1_validate_order_level.sql,0.20320579200051725,0,passed
+Task 2 data-quality profile,python3 src/common/run_sql_script.py marketplace.sqlite sql/task2_profile_data_quality.sql,0.08609750005416572,0,passed
+Task 2 timestamp validation,python3 src/task2/task2_validate_timestamps.py,0.3224815829889849,0,passed
+Task 2 label reliability assessment,python3 src/task2/task2_assess_label_reliability.py,0.31624908407684416,0,passed
+Task 2 label sensitivity,python3 src/task2/task2_label_sensitivity.py,0.2897313329158351,0,passed
+Task 2 clean order records,python3 src/task2/task2_clean_orders.py,0.6032961671007797,0,passed
+Task 2 clean-data validation,python3 src/common/run_sql_script.py marketplace.sqlite sql/task2_validate_clean_data.sql,0.0874759170692414,0,passed
+Task 3 exploratory analysis,python3 src/task3/task3_exploratory_analysis.py,0.9581088749691844,0,passed
+Task 3 robustness validation,python3 src/task3/task3_validate_findings.py,0.5735577089944854,0,passed
+Task 4 feature eligibility audit,python3 src/task4/task4_audit_feature_eligibility.py,0.4305905420333147,0,passed
+Task 4 numerical quality audit,python3 src/task4/task4_audit_numeric_quality.py,0.4042598329251632,0,passed
+Task 4 numerical outlier audit,python3 src/task4/task4_audit_numeric_outliers.py,0.4313272499712184,0,passed
+Task 4 feature build,python3 src/task4/task4_build_features.py,0.5584099580300972,0,passed
+Task 4 feature validation,python3 src/task4/task4_validate_features.py,0.4015534169739112,0,passed
+Task 5 isolated resource profiling,python3 src/task5/measure_pipeline_resources.py,28.804877166985534,0,passed
+Task 5 environment capture,python3 src/task5/capture_environment.py,0.32428775005973876,0,passed
+Complete pipeline,python3 run_pipeline.py,40.748693667002954,0,passed

@@ -1,0 +1,48 @@
+source_table,source_column,disposition,reason
+category_translation,product_category_name,join_key,Join key from products.
+category_translation,product_category_name_english,carried_to_order_level,English label for the product category. Carried for readability.
+customers,customer_id,join_key,Join key from orders. Not a predictor.
+customers,customer_unique_id,excluded,Customer identifier. Excluded to avoid identity memorization.
+customers,customer_zip_code_prefix,carried_to_order_level,Customer location available at approval.
+customers,customer_city,carried_to_order_level,Customer location available at approval.
+customers,customer_state,carried_to_order_level,Customer location available at approval.
+order_items,order_id,join_key,Aggregation key to order grain.
+order_items,order_item_id,aggregated,Item sequence. Aggregated into item_count and used to define the primary item.
+order_items,product_id,aggregated,Aggregated into distinct_product_count and used to join catalogue attributes.
+order_items,seller_id,aggregated,Aggregated into distinct_seller_count and used to join seller attributes.
+order_items,shipping_limit_date,excluded,Explicitly prohibited as a predictor by the assignment.
+order_items,price,aggregated,Repaired then aggregated into total_item_price.
+order_items,freight_value,aggregated,Repaired then aggregated into total_freight_value.
+order_payments,order_id,join_key,Aggregation key to order grain.
+order_payments,payment_sequential,excluded,Payments are prohibited as predictors.
+order_payments,payment_type,excluded,Payments are prohibited as predictors.
+order_payments,payment_installments,excluded,Payments are prohibited as predictors.
+order_payments,payment_value,excluded,Payments are prohibited as predictors.
+order_reviews,review_id,excluded,Reviews are prohibited as predictors.
+order_reviews,order_id,join_key,Aggregation key to order grain.
+order_reviews,review_score,excluded,Reviews are prohibited as predictors.
+order_reviews,review_comment_title,excluded,Reviews are prohibited as predictors.
+order_reviews,review_comment_message,excluded,Reviews are prohibited as predictors.
+order_reviews,review_creation_date,excluded,Reviews are prohibited as predictors.
+order_reviews,review_answer_timestamp,excluded,Reviews are prohibited as predictors.
+orders,order_id,join_key,Order grain and join key. Stored separately from the feature matrix.
+orders,customer_id,join_key,Join key to customers. Not a predictor.
+orders,order_status,excluded,Final or evolving order outcome creates leakage.
+orders,order_purchase_timestamp,carried_to_order_level,Available at approval. Supports elapsed-time features.
+orders,order_approved_at,carried_to_order_level,Defines the prediction cutoff.
+orders,order_delivered_carrier_date,excluded,Shipment event occurring after approval.
+orders,order_delivered_customer_date,excluded,Delivery outcome. Used only to construct the label.
+orders,order_estimated_delivery_date,carried_to_order_level,Available at approval. Supports estimated lead time.
+products,product_id,join_key,Join key from order items.
+products,product_category_name,aggregated,Normalized then carried as primary_product_category.
+products,product_name_lenght,excluded,"Listing copy length describes the catalogue entry rather than the shipment, and offers no defensible mechanism for delivery timing."
+products,product_description_lenght,excluded,"Listing copy length describes the catalogue entry rather than the shipment, and offers no defensible mechanism for delivery timing."
+products,product_photos_qty,aggregated,Repaired then aggregated into avg_product_photos_qty.
+products,product_weight_g,aggregated,Repaired then aggregated into total_product_weight_g.
+products,product_length_cm,aggregated,Repaired then combined into product volume.
+products,product_height_cm,aggregated,Repaired then combined into product volume.
+products,product_width_cm,aggregated,Repaired then combined into product volume.
+sellers,seller_id,join_key,Join key from order items.
+sellers,seller_zip_code_prefix,excluded,Seller location is represented at state level. Zip prefix adds cardinality without a matching gain.
+sellers,seller_city,excluded,Seller location is represented at state level. City adds cardinality without a matching gain.
+sellers,seller_state,aggregated,Normalized then compared against customer state to derive shipment origin features.

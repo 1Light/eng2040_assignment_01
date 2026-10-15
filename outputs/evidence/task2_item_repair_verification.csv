@@ -1,0 +1,11 @@
+column,check,value,basis
+price,scaled_ratio_exactly_1000,184,flagged rows with a clean same-product reference
+price,scaled_ratio_near_1000,92,flagged rows with a clean same-product reference
+price,scaled_without_reference,136,flagged rows whose product has no clean value
+price,exactness_coincidence_rate,0.0513,clean values below 10000
+freight_value,scaled_ratio_exactly_1000,76,flagged rows with a clean same-product reference
+freight_value,scaled_ratio_near_1000,237,flagged rows with a clean same-product reference
+freight_value,scaled_without_reference,160,flagged rows whose product has no clean value
+freight_value,exactness_coincidence_rate,0.0013,clean values below 1000
+price,negated_magnitude_matches_reference,0.9569,"255 negated rows with a reference, within 20%"
+freight_value,negated_magnitude_matches_reference,0.8778,"90 negated rows with a reference, within 5%"

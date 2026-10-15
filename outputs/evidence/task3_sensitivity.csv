@@ -1,0 +1,4 @@
+rule,labeled_orders,late_orders,late_rate,late_rate_ci95_low,late_rate_ci95_high,median_late_delay_days,mean_late_delay_days,median_approval_to_estimate_days,orders_with_valid_state,labeled_orders_difference_from_primary,late_rate_difference_from_primary,median_delay_difference_from_primary
+minimal_valid_delivery_and_estimate,17273,1107,0.06408846176113009,0.060532099233965374,0.06783867890640956,7.0,10.573622402890695,22.839930555555554,15546,1430,-0.0028180584686243737,0.0
+primary_purchase_approval_chronology,15843,1060,0.06690652022975446,0.063119808669743,0.07090321330581582,7.0,10.530188679245283,22.81974537037037,14211,0,0.0,0.0
+carrier_strict_chronology,15335,1041,0.06788392566025432,0.06400980551931595,0.07197449201720726,7.0,10.586935638808837,22.850358796296295,13730,-508,0.0009774054304998586,0.0

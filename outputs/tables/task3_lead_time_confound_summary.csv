@@ -1,0 +1,6 @@
+comparison,unit,observations,correlation
+pooled_across_all_orders,order,14211,-0.03038319009458892
+between_states,state,11,0.750257875206963
+within_states_median,state,11,-0.07571550371286372
+states_with_negative_within_state_correlation,state,11,11.0
+states_where_longer_lead_has_lower_late_rate,state,11,10.0

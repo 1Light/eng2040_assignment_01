@@ -1,0 +1,14 @@
+column,stage,quality_category,orders,late_orders,late_rate
+total_item_price,raw,missing,296,18,0.060810810810810814
+total_item_price,raw,negative,271,16,0.05904059040590406
+total_item_price,raw,positive,15247,1025,0.0672263396077917
+total_item_price,raw,zero,29,1,0.034482758620689655
+total_item_price,repaired,missing,369,25,0.06775067750677506
+total_item_price,repaired,positive,15474,1035,0.06688639007367196
+total_freight_value,raw,missing,251,18,0.07171314741035857
+total_freight_value,raw,negative,288,10,0.034722222222222224
+total_freight_value,raw,positive,15219,1030,0.06767855969511795
+total_freight_value,raw,zero,85,2,0.023529411764705882
+total_freight_value,repaired,missing,314,22,0.07006369426751592
+total_freight_value,repaired,positive,15479,1037,0.06699399185993928
+total_freight_value,repaired,zero,50,1,0.02

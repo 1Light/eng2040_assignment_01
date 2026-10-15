@@ -1,0 +1,15 @@
+# Generated databases
+marketplace.sqlite
+outputs/intermediate/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+.venv/
+venv/
+
+# OS
+.DS_Store

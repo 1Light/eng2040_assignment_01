@@ -1,0 +1,74 @@
+feature,representation,meaning,source
+item_count,numerical,Number of order-item rows in the order.,item_count
+distinct_product_count,numerical,Number of distinct products in the order.,distinct_product_count
+distinct_seller_count,numerical,Number of distinct sellers contributing items to the order.,distinct_seller_count
+total_item_price_missing,missing_indicator,"1 when at least one item in the order has no recorded price, so no order total exists; otherwise 0.",items_with_missing_price
+total_item_price,numerical,"Sum of repaired item prices in the order, in Brazilian reais. Set to 0 when total_item_price_missing is 1, where the indicator rather than the value carries the information.",total_item_price
+total_freight_value_missing,missing_indicator,"1 when at least one item in the order has no recorded freight charge, so no order total exists; otherwise 0.",items_with_missing_freight
+total_freight_value,numerical,"Sum of repaired item freight charges in the order, in Brazilian reais. Set to 0 when total_freight_value_missing is 1, where the indicator rather than the value carries the information.",total_freight_value
+total_product_weight_g_missing,missing_indicator,"1 when at least one item in the order has no recorded product weight, so no order weight exists; otherwise 0.",items_with_missing_weight
+total_product_weight_g,numerical,"Sum of repaired product weights across the items in the order, in grams. Set to 0 when total_product_weight_g_missing is 1.",total_product_weight_g
+total_product_volume_cm3_missing,missing_indicator,"1 when at least one item in the order has no recorded product dimensions, so no order volume exists; otherwise 0.",items_with_missing_volume
+total_product_volume_cm3,numerical,"Sum of repaired product volumes across the items in the order, in cubic centimetres. Set to 0 when total_product_volume_cm3_missing is 1.",total_product_volume_cm3
+avg_product_photos_qty_missing,missing_indicator,1 when no item in the order has a recorded listing photo count; otherwise 0.,avg_product_photos_qty
+avg_product_photos_qty,numerical,Mean listing photo count across the items in the order. Set to 0 when avg_product_photos_qty_missing is 1.,avg_product_photos_qty
+distinct_category_count,numerical,Number of distinct product categories in the order. 0 when no item has a known category.,distinct_category_count
+shipped_from_customer_state,derived_indicator,1 when every item with a known seller state ships from the customer's own state; otherwise 0.,items_from_customer_state + items_with_known_seller_state
+seller_state_unknown,derived_indicator,"1 when no item in the order has a valid seller state, so shipment origin cannot be determined; otherwise 0.",items_with_known_seller_state
+purchase_to_approval_hours,engineered_numerical,Elapsed hours from order purchase to approval.,order_purchase_timestamp + order_approved_at
+estimated_lead_days,engineered_numerical,Days from approval to the estimated delivery timestamp.,order_approved_at + order_estimated_delivery_date
+approval_hour_sin,cyclical_date_time,Sine encoding of approval time within the 24-hour daily cycle.,order_approved_at
+approval_hour_cos,cyclical_date_time,Cosine encoding of approval time within the 24-hour daily cycle.,order_approved_at
+approval_weekday_sin,cyclical_date_time,Sine encoding of approval weekday within the seven-day weekly cycle.,order_approved_at
+approval_weekday_cos,cyclical_date_time,Cosine encoding of approval weekday within the seven-day weekly cycle.,order_approved_at
+approval_month_sin,cyclical_date_time,Sine encoding of approval month within the annual cycle.,order_approved_at
+approval_month_cos,cyclical_date_time,Cosine encoding of approval month within the annual cycle.,order_approved_at
+product_category_automotivo,one_hot_categorical,1 when the first item in the order belongs to category automotivo; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_bebes,one_hot_categorical,1 when the first item in the order belongs to category bebes; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_beleza_saude,one_hot_categorical,1 when the first item in the order belongs to category beleza_saude; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_brinquedos,one_hot_categorical,1 when the first item in the order belongs to category brinquedos; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_cama_mesa_banho,one_hot_categorical,1 when the first item in the order belongs to category cama_mesa_banho; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_cool_stuff,one_hot_categorical,1 when the first item in the order belongs to category cool_stuff; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_eletronicos,one_hot_categorical,1 when the first item in the order belongs to category eletronicos; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_esporte_lazer,one_hot_categorical,1 when the first item in the order belongs to category esporte_lazer; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_fashion_bolsas_e_acessorios,one_hot_categorical,1 when the first item in the order belongs to category fashion_bolsas_e_acessorios; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_ferramentas_jardim,one_hot_categorical,1 when the first item in the order belongs to category ferramentas_jardim; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_informatica_acessorios,one_hot_categorical,1 when the first item in the order belongs to category informatica_acessorios; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_moveis_decoracao,one_hot_categorical,1 when the first item in the order belongs to category moveis_decoracao; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_papelaria,one_hot_categorical,1 when the first item in the order belongs to category papelaria; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_perfumaria,one_hot_categorical,1 when the first item in the order belongs to category perfumaria; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_pet_shop,one_hot_categorical,1 when the first item in the order belongs to category pet_shop; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_relogios_presentes,one_hot_categorical,1 when the first item in the order belongs to category relogios_presentes; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_telefonia,one_hot_categorical,1 when the first item in the order belongs to category telefonia; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_unmapped_category,one_hot_categorical,1 when the first item in the order belongs to category unmapped_category; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_utilidades_domesticas,one_hot_categorical,1 when the first item in the order belongs to category utilidades_domesticas; otherwise 0. Retained because the category covers at least 250 modelling rows.,primary_product_category
+product_category_other,one_hot_categorical,1 when the first item has a known category that covers fewer than 250 modelling rows; otherwise 0.,primary_product_category
+product_category_unknown,one_hot_categorical,1 when the first item has no known product category; otherwise 0.,primary_product_category
+customer_state_AC,one_hot_categorical,1 when the customer state is AC; otherwise 0.,customer_state
+customer_state_AL,one_hot_categorical,1 when the customer state is AL; otherwise 0.,customer_state
+customer_state_AP,one_hot_categorical,1 when the customer state is AP; otherwise 0.,customer_state
+customer_state_AM,one_hot_categorical,1 when the customer state is AM; otherwise 0.,customer_state
+customer_state_BA,one_hot_categorical,1 when the customer state is BA; otherwise 0.,customer_state
+customer_state_CE,one_hot_categorical,1 when the customer state is CE; otherwise 0.,customer_state
+customer_state_DF,one_hot_categorical,1 when the customer state is DF; otherwise 0.,customer_state
+customer_state_ES,one_hot_categorical,1 when the customer state is ES; otherwise 0.,customer_state
+customer_state_GO,one_hot_categorical,1 when the customer state is GO; otherwise 0.,customer_state
+customer_state_MA,one_hot_categorical,1 when the customer state is MA; otherwise 0.,customer_state
+customer_state_MT,one_hot_categorical,1 when the customer state is MT; otherwise 0.,customer_state
+customer_state_MS,one_hot_categorical,1 when the customer state is MS; otherwise 0.,customer_state
+customer_state_MG,one_hot_categorical,1 when the customer state is MG; otherwise 0.,customer_state
+customer_state_PA,one_hot_categorical,1 when the customer state is PA; otherwise 0.,customer_state
+customer_state_PB,one_hot_categorical,1 when the customer state is PB; otherwise 0.,customer_state
+customer_state_PR,one_hot_categorical,1 when the customer state is PR; otherwise 0.,customer_state
+customer_state_PE,one_hot_categorical,1 when the customer state is PE; otherwise 0.,customer_state
+customer_state_PI,one_hot_categorical,1 when the customer state is PI; otherwise 0.,customer_state
+customer_state_RJ,one_hot_categorical,1 when the customer state is RJ; otherwise 0.,customer_state
+customer_state_RN,one_hot_categorical,1 when the customer state is RN; otherwise 0.,customer_state
+customer_state_RS,one_hot_categorical,1 when the customer state is RS; otherwise 0.,customer_state
+customer_state_RO,one_hot_categorical,1 when the customer state is RO; otherwise 0.,customer_state
+customer_state_RR,one_hot_categorical,1 when the customer state is RR; otherwise 0.,customer_state
+customer_state_SC,one_hot_categorical,1 when the customer state is SC; otherwise 0.,customer_state
+customer_state_SP,one_hot_categorical,1 when the customer state is SP; otherwise 0.,customer_state
+customer_state_SE,one_hot_categorical,1 when the customer state is SE; otherwise 0.,customer_state
+customer_state_TO,one_hot_categorical,1 when the customer state is TO; otherwise 0.,customer_state
+customer_state_unknown,one_hot_categorical,1 when customer state is missing or not a valid Brazilian state/Federal District code.,customer_state

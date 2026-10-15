@@ -1,0 +1,30 @@
+column,feature_type,reliable_label_rows,non_null_count,missing_count,distinct_count,minimum,maximum,negative_count
+order_purchase_timestamp,date_time,15843,15843,0,15829,2016-10-03 21:13:36,2018-08-29 09:14:11,
+order_approved_at,date_time,15843,15843,0,15557,2016-10-04 13:26:11,2018-08-29 09:25:12,
+order_estimated_delivery_date,date_time,15843,15843,0,418,2016-11-23 00:00:00,2018-10-05 00:00:00,
+customer_zip_code_prefix,categorical,15843,14869,974,7343,,,
+customer_city,categorical,15843,14867,976,2287,,,
+customer_state,categorical,15843,14876,967,28,,,
+item_count,numerical,15843,15843,0,12,1,21,0
+distinct_product_count,numerical,15843,15843,0,7,1,8,0
+distinct_seller_count,numerical,15843,15843,0,4,1,4,0
+total_item_price,numerical,15843,15474,369,2899,0.85,9900.0,0
+total_freight_value,numerical,15843,15529,314,3764,0.0,479.28,0
+items_with_missing_price,numerical,15843,15843,0,3,0,2,0
+items_with_missing_freight,numerical,15843,15843,0,2,0,1,0
+total_product_weight_g,numerical,15843,14724,1119,1347,0.0,129336.0,0
+max_product_weight_g,numerical,15843,14903,940,1195,0.0,30000.0,0
+total_product_volume_cm3,numerical,15843,14510,1333,2676,352.0,793600.0,0
+max_product_volume_cm3,numerical,15843,14696,1147,2349,352.0,294000.0,0
+avg_product_photos_qty,numerical,15843,14505,1338,37,1.0,18.0,0
+distinct_category_count,numerical,15843,15843,0,4,0,3,0
+primary_product_category,categorical,15843,14563,1280,73,,,
+primary_product_category_english,categorical,15843,14078,1765,70,,,
+primary_seller_state,categorical,15843,15035,808,20,,,
+distinct_seller_state_count,numerical,15843,15843,0,4,0,3,0
+items_from_customer_state,numerical,15843,15843,0,12,0,20,0
+items_with_known_seller_state,numerical,15843,15843,0,13,0,20,0
+items_with_missing_product_reference,numerical,15843,15843,0,3,0,2,0
+items_with_missing_seller_reference,numerical,15843,15843,0,4,0,3,0
+items_with_missing_weight,numerical,15843,15843,0,6,0,6,0
+items_with_missing_volume,numerical,15843,15843,0,7,0,6,0

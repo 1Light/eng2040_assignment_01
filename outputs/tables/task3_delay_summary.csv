@@ -1,0 +1,2 @@
+labeled_orders,late_orders,on_time_orders,late_rate,late_rate_ci95_low,late_rate_ci95_high,mean_late_delay_days,median_late_delay_days,p25_late_delay_days,p75_late_delay_days,p90_late_delay_days,p95_late_delay_days,max_late_delay_days
+15843,1060,14783,0.06690652022975446,0.063119808669743,0.07090321330581582,10.530188679245283,7.0,3.0,13.0,22.0,29.0,188.0

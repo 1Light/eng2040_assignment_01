@@ -1,0 +1,13 @@
+metric,value,unit
+source_orders,20000,rows
+repaired_item_rows,22662,rows
+cleaned_product_rows,11334,rows
+derived_orders,20000,rows
+build_runtime,0.263253,seconds
+validation_runtime,0.192845,seconds
+peak_child_process_memory,50528256,bytes
+source_database_size,24363008,bytes
+repaired_items_database_size,4800512,bytes
+catalogue_database_size,2093056,bytes
+derived_database_size,7811072,bytes
+input_storage_read,31256576,bytes

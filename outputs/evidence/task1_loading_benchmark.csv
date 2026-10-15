@@ -1,0 +1,3 @@
+approach,runs,median_runtime_seconds,median_runtime_seconds_reported,median_peak_memory_bytes,median_peak_memory_mib_reported,output_rows,median_output_size_bytes,median_output_size_mib_reported
+sqlite,5,0.25263066694606096,0.2526,50626560,48.28,20000,7811072,7.45
+pandas,5,0.35216195799876004,0.3522,212008960,202.19,20000,6909952,6.59

@@ -1,0 +1,9 @@
+column,defect,item_rows,share_of_item_rows,repaired
+price,scaled,412,0.01818,yes
+price,negated,408,0.018004,yes
+price,missing,439,0.019372,no
+freight_value,scaled,473,0.020872,yes
+freight_value,negated,458,0.02021,yes
+freight_value,missing,427,0.018842,no
+all,item_rows_total,22662,1.0,
+all,item_rows_with_multiple_defects,0,,
